@@ -1,12 +1,61 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Title
 
-Currently, two official plugins are available:
+# Provider Profile Builder – HabotConnect UI/UX Developer Assignment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A multi-step, responsive React application that allows learning support providers to create and preview their profiles. This project was built as part of the pre-interview assignment for the UI/UX Developer [React] role at Habot Connect DMCC.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Project Overview
+
+This application simulates a **Provider Profile Builder Wizard**, where users can input:
+- Basic information (name, bio, profile image)
+- Services & expertise (specializations, services, years of experience)
+- Contact & availability details
+
+Key features:
+- Multi-step form with navigation
+- Live profile preview section
+- Simulated image upload
+- Responsive design using Tailwind CSS
+- State management using React Hooks
+- Submission simulation (logs to console + success alert)
+#### Technologies Used
+
+- **React.js**
+- **Tailwind CSS** – for clean and responsive UI
+- **Vite** – for fast React project setup
+- **JavaScript**
+- **Git** – for version control
+## Run Locally
+
+Clone the project
+
+```bash
+ git clone https://github.com/ritesh-doijad/provider-profile-builder.git
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+## Demo
+
+https://provider-profile-builder.vercel.app/
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://riteshdoijad-fmadc9yrs-riteshs-projects-b99d6186.vercel.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/riteshdoijad284)
+
+
