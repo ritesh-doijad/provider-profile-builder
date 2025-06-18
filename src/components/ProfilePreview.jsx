@@ -28,7 +28,7 @@ const ProfilePreview = ({ data }) => {
   return (
     <div className="space-y-6">
       
-     
+
       <div className="bg-white border border-slate-200 rounded-xl shadow-sm p-6">
        
         <div className="flex items-start gap-4 mb-6">

@@ -1,13 +1,12 @@
-"use client"
 
-import { useState } from "react"
-import BasicInfo from "./components/BasicInfo"
-import Services from "./components/Services"
-import Contact from "./components/Contact"
-import ProfilePreview from "./components/ProfilePreview"
+import { useState } from "react";
+import BasicInfo from "./components/BasicInfo";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+import ProfilePreview from "./components/ProfilePreview";
 
 const App = () => {
-  const [step, setStep] = useState(1)
+  const [step, setStep] = useState(1);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -19,55 +18,55 @@ const App = () => {
     email: "",
     phone: "",
     workingHours: "",
-  })
+  });
 
   const updateFormData = (updates) => {
-    setFormData((prev) => ({ ...prev, ...updates }))
-  }
+    setFormData((prev) => ({ ...prev, ...updates }));
+  };
 
   const handleNext = () => {
-    if (step < 3) setStep((prev) => prev + 1)
-  }
+    if (step < 3) setStep((prev) => prev + 1);
+  };
 
   const handlePrevious = () => {
-    if (step > 1) setStep((prev) => prev - 1)
-  }
+    if (step > 1) setStep((prev) => prev - 1);
+  };
 
   const handleSubmit = () => {
-    console.log("Submitted Profile:", formData)
-    alert("Profile saved successfully!")
-  }
+    console.log("Submitted Profile:", formData);
+    alert("Profile saved successfully!");
+  };
 
   const CurrentStep = () => {
     switch (step) {
       case 1:
-        return <BasicInfo data={formData} updateFormData={updateFormData} />
+        return <BasicInfo data={formData} updateFormData={updateFormData} />;
       case 2:
-        return <Services data={formData} updateFormData={updateFormData} />
+        return <Services data={formData} updateFormData={updateFormData} />;
       case 3:
-        return <Contact data={formData} updateFormData={updateFormData} />
+        return <Contact data={formData} updateFormData={updateFormData} />;
       default:
-        return null
+        return null;
     }
-  }
+  };
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-4">
       <div className="max-w-6xl mx-auto">
-        
         <header className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-slate-900">Provider Profile Setup</h1>
-          <p className="text-slate-600 mt-2">Complete your profile to begin offering services</p>
+          <h1 className="text-3xl font-bold text-slate-900">
+            Provider Profile Setup
+          </h1>
+          <p className="text-slate-600 mt-2">
+            Complete your profile to begin offering services
+          </p>
         </header>
 
-        
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="grid lg:grid-cols-3">
-           
             <section className="lg:col-span-2 p-8">
               {CurrentStep()}
 
-              
               <div className="flex justify-start gap-4 mt-8 pt-6 border-t border-slate-200">
                 {step > 1 && (
                   <button
@@ -96,7 +95,6 @@ const App = () => {
               </div>
             </section>
 
-            
             <aside className="bg-slate-50 p-8">
               <ProfilePreview data={formData} />
             </aside>
@@ -104,7 +102,7 @@ const App = () => {
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default App
+export default App;
